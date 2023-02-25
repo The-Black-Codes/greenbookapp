@@ -1,26 +1,9 @@
-import { auth, googleProvider } from "../../firebase-config/firebase"
-import { signInWithPopup, signOut } from "firebase/auth"
 import { useState } from "react"
 
 // Sign Component handles SignInWithGoogle and SignOut
 export const SignIn = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-
-    const signInWithGoogle = async () => {
-        try {
-            await signInWithPopup(auth, googleProvider)
-        } catch (err) {
-            console.log(err)
-    }
-}
-    const logout = async () => {
-        try {
-            await signOut(auth);
-        }   catch (err) {
-            console.log(err)
-        }
-    }
 
 return (
   <main>
@@ -48,8 +31,8 @@ return (
         ></input>
       </fieldset>
     </form>
-    <button onClick={signInWithGoogle}>Sign In With Google</button>
-    <button onClick={logout}>Logout</button>
+    <button>Sign In With Google</button>
+    <button>Logout</button>
   </main>
 );
 
