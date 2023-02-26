@@ -1,7 +1,7 @@
 // Interview Manager Component holds all Interview related requests.
 
 export const createBusiness = (interview) => {
-  return fetch("http://localhost:8000/interviews", {
+  return fetch("http://localhost:8088/interviews", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const getAllIncidentTypes = () => {
 
 
 export const deleteBusiness = (id) => {
-  return fetch(`http://localhost:8000/interviews/${id}`, {
+  return fetch(`http://localhost:8088/interviews/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Token ${localStorage.getItem("seeker_token")}`,
@@ -46,7 +46,7 @@ export const deleteBusiness = (id) => {
 };
 
 export const updateBusiness = (interview, id) => {
-  return fetch(`http://localhost:8000/interviews/${id}`, {
+  return fetch(`http://localhost:8088/interviews/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
