@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import {
-  getAllBusinesses,
-  getAllCategories,
   getAllIncidents,
   getAllIncidentTypes,
 } from "../managers/BusinessManager";
-import { BusinessList } from "./BlackOwnedBusinessList";
 import { IncidentsList } from "./IncidentsList";
 
 export const IncidentsDirectory = () => {

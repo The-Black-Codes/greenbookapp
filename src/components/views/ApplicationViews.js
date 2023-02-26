@@ -1,5 +1,6 @@
 import { Route, Routes, Outlet } from "react-router-dom";
 import { BlackOwnedBusinessDirectory, } from "../businesses/BlackOwnedBusinessDirectory";
+import { BusinessDirectoryContainer } from "../businesses/BusinessDirectoryContainer";
 import { BusinessProfile } from "../businesses/BusinessProfile";
 import { IncidentsDirectory } from "../businesses/IncidentsDirectory";
 import { About } from "./About";
@@ -19,7 +20,7 @@ export const ApplicationViews = () => {
           </>
         }
       ></Route>
-      <Route path="/businesses" element={<BlackOwnedBusinessDirectory />}></Route>
+      <Route path="/businesses" element={<BusinessDirectoryContainer />}></Route>
       <Route path="/businesses/:id" element={<BusinessProfile />}></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/incidents" element={<IncidentsDirectory />}></Route>

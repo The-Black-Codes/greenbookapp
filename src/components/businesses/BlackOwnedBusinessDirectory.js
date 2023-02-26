@@ -1,47 +1,93 @@
 import { useState, useEffect } from "react";
-import { getAllBusinesses, getAllCategories } from "../managers/BusinessManager";
-import { BusinessList } from "./BlackOwnedBusinessList";
+import {
+  getAllBusinesses,
+  getAllCategories,
+} from "../managers/BusinessManager";
+import { Link } from "react-router-dom"
+
+export const BlackOwnedBusinessDirectory = ({businesses, searchedBusinesses}) => {
+ 
+
+  const heroCheckmark = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+      />
+    </svg>
+  );
 
 
-export const BlackOwnedBusinessDirectory = () => {
-  const [businesses, setBusinesses] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const displayFilteredBusinesses = () => {
+    
 
-  useEffect(() => {
-    getAllBusinesses().then((businesses) => {
-      setBusinesses(businesses);
-    })
-  }, [])
-
-  useEffect(() => {
-    getAllCategories().then((categories) => {
-      setCategories(categories);
-    })
-  }, [])
+    return (
+      <>
+          <main className="w-3/4 h-full mt-10 fixed overflow-y-scroll">
+            <div className="space-y-3">
+              {businesses.map((business) => {
+                return (
+                  <div className="border relative p-3 rounded-lg">
+                    <h2 className="text-2xl mb-2">{business.name}</h2>
+                    {business.website === "" ? (
+                      <Link
+                        to={`/businesses/${business.id}`}
+                        className="bg-greenbook-green text-white p-1 rounded-lg"
+                      >
+                        View Business Profile
+                      </Link>
+                    ) : (
+                      <>
+                        <div className="flex space-x-2">
+                          <Link
+                            to={`/businesses/${business.id}`}
+                            className="bg-greenbook-green text-white p-1 rounded-lg"
+                          >
+                            View Business Profile
+                          </Link>
+                          <a
+                            href={`${business.website}`}
+                            target="_blank"
+                            className="bg-greenbook-green text-white p-1 rounded-lg"
+                          >
+                            View Website
+                          </a>
+                        </div>
+                      </>
+                    )}
+                    <div className="">{business?.category?.name}</div>
+                    <div>{business.address}</div>
+                    <div>{business.City}</div>
+                    {business.isBlackOwned ? (
+                      <div className="flex absolute top-1 right-3">
+                        Black Owned {heroCheckmark}
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </main>
+      </>
+    );
+  }
 
 
   return (
     <main>
-      <h1 className="text-5xl text-center m-8">Businesses Directory</h1>
+      <div className="flex justify-center"></div>
       <div className="flex justify-center">
-        <div className="flex space-x-16 border justify-center w-2/3 h-20 rounded-lg shadow-lg">
-          <select className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2 ring-greenbook-green">
-            <option value={0}>Select Category</option>
-            {categories.map((category) => {
-              return <option value={category.id}>{category.name}</option>;
-            })}
-          </select>
-          <input
-            className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2 ring-greenbook-green"
-            placeholder="Search Businesses"
-          ></input>
-          <select className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2">
-            <option value={0}>Select Filter</option>
-          </select>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <BusinessList businesses={businesses} />
+        {displayFilteredBusinesses()}
       </div>
     </main>
   );

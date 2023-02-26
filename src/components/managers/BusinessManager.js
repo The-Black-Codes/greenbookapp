@@ -44,14 +44,3 @@ export const deleteBusiness = (id) => {
     },
   });
 };
-
-export const updateBusiness = (interview, id) => {
-  return fetch(`http://localhost:8088/interviews/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Token ${localStorage.getItem("seeker_token")}`,
-    },
-    body: JSON.stringify(interview),
-  });
-};
