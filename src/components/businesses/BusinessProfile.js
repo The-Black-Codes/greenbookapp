@@ -43,8 +43,10 @@ export const BusinessProfile = () => {
       <div className="flex">
         <div className="flex-col w-5/12 h-1/2 border">
           <div>Address {business.address}</div>
-          <div>City {business.city}</div>
-          <div>Website {business.website}</div>
+          <div>City {business.City}</div>
+          {
+            business.website === "" ? "" : <div>Website {business.website}</div>}
+
         </div>
         <div className="w-5/12 h-1/2 border"></div>
       </div>
