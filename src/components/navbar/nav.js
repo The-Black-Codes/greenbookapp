@@ -21,11 +21,11 @@ export const NavBar = () => {
         </button>
         <button
           onClick={() => {
-            navigate("/blogs");
+            navigate("/events");
           }}
           className="text-white text-xl"
         >
-          Blogs
+          Events
         </button>
         <button
           onClick={() => {
