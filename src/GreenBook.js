@@ -1,11 +1,19 @@
-import { Route, Routes } from "react-router-dom";
-import { SignIn } from "./components/auth/auth";
+import { Route, Routes, Outlet } from "react-router-dom";
+import { NavBar } from "./components/navbar/nav";
+import { ApplicationViews } from "./components/views/ApplicationViews";
+
 
 export const GreenBook = () => {
-  return (
-    <Routes>
-    </Routes>
-  );
+  return <Routes>
+
+		<Route path="*" element={
+				<>
+					<NavBar />
+					<ApplicationViews />
+
+				</>
+		} />
+	</Routes>
 }
 // import React from "react";
 // import "./App.css";

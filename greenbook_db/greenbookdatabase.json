@@ -1,0 +1,278 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Michael",
+      "lastName": "Jackson",
+      "email": "mj@gmail.com",
+      "isStaff": "False"
+    },
+    {
+      "id": 2,
+      "firstName": "Mike",
+      "lastName": "Jones",
+      "email": "jones@gmail.com",
+      "isStaff": "False"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Slim and Husky's is amazing!!!",
+      "date": "02/27/2023",
+      "content": "Food was great"
+    }
+  ],
+  "comments": [
+    {
+      "id": 2,
+      "userId": 2,
+      "blogId": 1,
+      "commentDateTime": "02/27/2023",
+      "content": "I agree! Their pizza is my favorite"
+    }
+  ],
+  "businesses": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Smokin Buttz BBQ",
+      "address": "Mobile - Food Truck",
+      "City": "Murfreesboro",
+      "website": "https://www.smokinbuttzbbq.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Prince's Cold Chicken",
+      "address": "Mobile - Food Truck",
+      "City": "Nashville",
+      "website": "",
+      "isBlackOwned": false,
+      "greenBookApproved": false
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "The Muffin Maker",
+      "address": "Mobile - Food Truck",
+      "City": "Antioch",
+      "website": "",
+      "isBlackOwned": false,
+      "greenBookApproved": false
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Granddaddy's Famous Hot Chicken",
+      "address": "5546 Clarksville Pike",
+      "City": "Joelton",
+      "website": "https://www.granddaddysfamoushotchicken.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Hifi Cookies",
+      "address": "",
+      "City": "Nashville",
+      "website": "https://www.hificookies.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "name": "Radical Rabbit",
+      "address": "",
+      "City": "Nashville",
+      "website": "https://radrab.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "name": "The Cupcake Collection",
+      "address": "1213 6th Avenue N",
+      "City": "Nashville",
+      "website": "https://www.thecupcakecollection.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "name": "The Cupcake Collection",
+      "address": "1213 6th Avenue N",
+      "City": "Nashville",
+      "website": "https://www.thecupcakecollection.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 9,
+      "categoryId": 4,
+      "name": "Max Sports Performance",
+      "address": "6339 Charlotte Pike #902",
+      "City": "Nashville",
+      "website": "https://www.thecupcakecollection.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 10,
+      "categoryId": 3,
+      "name": "díVine House",
+      "address": "2320 West End Ave",
+      "City": "Nashville",
+      "website": "https://divinehousenashville.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 11,
+      "categoryId": 3,
+      "name": "díVine House",
+      "address": "2320 West End Ave",
+      "City": "Nashville",
+      "website": "https://divinehousenashville.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 12,
+      "categoryId": 5,
+      "name": "HER-bal Whole Health & Beauty Spa",
+      "address": "301 14th Ave. North Ste. 209",
+      "City": "Nashville",
+      "website": "https://www.her-bal.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 13,
+      "categoryId": 1,
+      "name": "Sinema",
+      "address": "2600 8th Ave S",
+      "City": "Nashville",
+      "website": "http://www.sinemanashville.com",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 14,
+      "categoryId": 6,
+      "name": "Board & Brush Creative Studio Nashville",
+      "address": "337 Cleveland St",
+      "City": "Nashville",
+      "website": "https://boardandbrush.com/nashville/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 15,
+      "categoryId": 5,
+      "name": "BPS Wellness Center",
+      "address": "1603 Hayes St Ste 14",
+      "City": "Nashville",
+      "website": "https://www.bpswellnesscentertn.com/",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 16,
+      "categoryId": 6,
+      "name": "World Boss Studios",
+      "address": "107 New Brick Church Pike",
+      "City": "Goodlettsville",
+      "website": "http://worldbossstudios.com",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    },
+    {
+      "id": 17,
+      "categoryId": 2,
+      "name": "All People Coffee",
+      "address": "347 Douglas Ave Suite 101",
+      "City": "Nashville",
+      "website": "https://www.allpeoplecoffee.com",
+      "isBlackOwned": true,
+      "greenBookApproved": true
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Restaurants"
+    },
+    {
+      "id": 2,
+      "name": "Coffee Shops"
+    },
+    {
+      "id": 3,
+      "name": "Bars & Lounges"
+    },
+    {
+      "id": 4,
+      "name": "fitness"
+    },
+    {
+      "id": 5,
+      "name": "Health & Wellness"
+    },
+    {
+      "id": 6,
+      "name": "Arts"
+    }
+  ],
+  "likes": [
+    {
+      "id": 1,
+      "businessId": 1,
+      "userId": 2,
+      "isLiked": true
+    }
+  ],
+  "dislikes": [
+    {
+      "id": 1,
+      "businessId": 1,
+      "userId": 1,
+      "isDisliked": true
+    }
+  ],
+  "incidents": [
+    {
+      "id": 1,
+      "userId": 1,
+      "businessId": 2,
+      "incidentTypeId": 4,
+      "title": "Refused to Serve Me",
+      "content": "Unbelievable"
+    }
+  ],
+  "incidentTypes": [
+    {
+      "id": 1,
+      "type": "Microaggression"
+    },
+    {
+      "id": 2,
+      "type": "Racial discrimination"
+    },
+    {
+      "id": 3,
+      "type": "Physical altercation"
+    },
+    {
+      "id": 4,
+      "type": "Denial of Services"
+    }
+  ]
+}
