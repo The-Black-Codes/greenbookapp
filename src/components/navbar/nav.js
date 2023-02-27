@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import greenBookLogo from "../../images/greenbooklogo_h.svg";
+// import {greenBookLogo} from "../../images/greenbooklogo_h.svg";
 
 export const NavBar = () => {
     const navigate = useNavigate()
