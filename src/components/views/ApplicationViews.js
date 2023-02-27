@@ -2,6 +2,7 @@ import { Route, Routes, Outlet } from "react-router-dom";
 import { BlackOwnedBusinessDirectory, } from "../businesses/BlackOwnedBusinessDirectory";
 import { BusinessProfile } from "../businesses/BusinessProfile";
 import { IncidentsDirectory } from "../businesses/IncidentsDirectory";
+import { IncidentForm } from "../businesses/IncidentForm"; 
 import { About } from "./About";
 import { HomePageView } from "./HomePageView";
 
@@ -23,6 +24,7 @@ export const ApplicationViews = () => {
       <Route path="/businesses/:id" element={<BusinessProfile />}></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/incidents" element={<IncidentsDirectory />}></Route>
+      <Route path="/incidentform" element={<IncidentForm />}></Route>
     </Routes>
   );
 };

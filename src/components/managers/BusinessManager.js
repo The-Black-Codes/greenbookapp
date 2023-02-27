@@ -25,9 +25,19 @@ export const getAllCategories = () => {
 
 export const getAllIncidents = () => {
   return fetch(
-    `http://localhost:8088/incidents?_expand=business&_expand=incidentType&_expand=user`
+    `http://localhost:8088/incidents?_expand=business&_expand=incidentType`
   ).then((res) => res.json());
 };
+
+export const createIncident = (newIncident) => {
+  return fetch(`http://localhost:8088/incidents`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newIncident)
+  }).then(response => response.json())
+}
 
 export const getAllIncidentTypes = () => {
   return fetch(`http://localhost:8088/incidentTypes`).then((res) =>
