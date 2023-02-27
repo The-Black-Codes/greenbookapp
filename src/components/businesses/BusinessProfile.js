@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getSingleBusiness } from "../managers/BusinessManager";
+import { BusinessReactions } from "./BusinessReactions";
 
 export const BusinessProfile = () => {
   const [business, setBusiness] = useState({});
-  const businessId = useParams();
+  const { businessId } = useParams();
 
   useEffect(() => {
     getSingleBusiness(businessId).then((business) => {
@@ -59,11 +60,7 @@ export const BusinessProfile = () => {
           </div>
         </div>
         <div className="w-7/12 h-1/2 ">
-          <div className="flex space-x-3 mt-3 ml-3">
-            <button className="bg-greenbook-green p-2 text-white rounded-lg">Likes</button>
-            <button className="bg-greenbook-green p-2 text-white rounded-lg">Dislikes</button>
-            <div className="bg-greenbook-green p-2 text-white rounded-lg">Approval Rating</div>
-          </div>
+          <BusinessReactions businessId={businessId} />
           <div className="border rounded-lg mt-10">
             <h2 className="text-3xl mt-3 ml-3">About</h2>
             <div className="m-5">{business.summary}</div>
