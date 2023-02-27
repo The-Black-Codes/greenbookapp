@@ -8,6 +8,7 @@ import { About } from "./About";
 import { HomePageView } from "./HomePageView";
 import { Register } from "../auth/Register";
 import { Login } from "../auth/Login";
+import { Events } from "../calendar/Events";
 
 // This component is responsible for rendering all the possible views for visitors to the site. It contains routes to other components in the application.
 export const ApplicationViews = () => {
@@ -31,6 +32,7 @@ export const ApplicationViews = () => {
       ></Route>
       <Route path="/businesses/:businessId" element={<BusinessProfile />}></Route>
       <Route path="/about" element={<About />}></Route>
+      <Route path="/events" element={<Events />}></Route>
       <Route path="/incidents" element={<IncidentsDirectory />}></Route>
       <Route path="/incidentform" element={<IncidentForm />}></Route>
     </Routes>
