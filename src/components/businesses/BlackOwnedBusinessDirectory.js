@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 
 export const BlackOwnedBusinessDirectory = ({businesses, searchedBusinesses}) => {
 
+  // checkmark icon from hero icons
   const heroCheckmark = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -27,14 +28,13 @@ export const BlackOwnedBusinessDirectory = ({businesses, searchedBusinesses}) =>
 
 
   return (
-    <main>
-      <div className="flex justify-center"></div>
-      <div className="flex justify-center">
-        <main className="w-3/4 h-full mt-10 fixed overflow-y-scroll">
+    <main className="">
+      <div className="flex justify-center bg-black">
+        <main className="w-3/4 h-[660px] mt-5 fixed overflow-y-scroll bg-green-100 p-3 rounded-xl">
           <div className="space-y-3">
             {businesses.map((business) => {
               return (
-                <div className="border relative p-3 rounded-lg">
+                <div className="border bg-white relative p-3 rounded-lg shadow-xl">
                   <h2 className="text-2xl mb-2">{business.name}</h2>
                   {business.website === "" ? (
                     <Link

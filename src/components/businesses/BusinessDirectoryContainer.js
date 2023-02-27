@@ -17,7 +17,7 @@ export const BusinessDirectoryContainer = () => {
   // The Business Directory Container parent component will return two children components.
   return (
     <>
-      <h1 className="text-5xl text-center m-8">Businesses Directory</h1>
+      <h1 className="text-5xl text-center m-5">Businesses Directory</h1>
       <BusinessSearch
         setterFunction={setBusinessSearchTerms}
         businesses={businesses}
