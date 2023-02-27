@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import greenBookLogo from "../../images/greenbooklogo.svg";
+import greenBookLogo from "../../images/greenbooklogo_h.svg";
 import { getSingleBusiness } from "../managers/BusinessManager";
 import { getSingleUser } from "../managers/UserManager";
 
 export const NavBar = () => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
-
+  
   const greenBookUser = localStorage.getItem("greenbook_user");
   const greenBookUserObject = JSON.parse(greenBookUser);
 
@@ -18,7 +18,7 @@ export const NavBar = () => {
         setUser(currentUser);
       });
     }
-  }, []);
+  }, [greenBookUser]);
 
   return (
     <nav className="flex justify-evenly bg-greenbook-green w-screen h-24">
