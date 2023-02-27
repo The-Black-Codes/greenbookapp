@@ -29,7 +29,7 @@ export const ApplicationViews = () => {
         path="/businesses"
         element={<BusinessDirectoryContainer />}
       ></Route>
-      <Route path="/businesses/:id" element={<BusinessProfile />}></Route>
+      <Route path="/businesses/:businessId" element={<BusinessProfile />}></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/incidents" element={<IncidentsDirectory />}></Route>
       <Route path="/incidentform" element={<IncidentForm />}></Route>
