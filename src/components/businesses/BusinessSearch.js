@@ -125,7 +125,7 @@ export const BusinessSearch = ({
   };
   return (
     <main className="flex justify-center">
-      <div className="flex space-x-16 border justify-center w-2/3 h-20 rounded-lg shadow-lg">
+      <div className="flex space-x-16 border justify-center w-2/3 h-24 rounded-lg shadow-lg">
         <button
           className="bg-greenbook-green text-white h-fit p-2 mt-5 bt-5 rounded-lg"
           onClick={() => {
