@@ -40,15 +40,35 @@ export const BusinessProfile = () => {
           <div> {heroCheckmark}</div>
         </div>
       </div>
-      <div className="flex">
-        <div className="flex-col w-5/12 h-1/2 border">
-          <div>Address {business.address}</div>
-          <div>City {business.City}</div>
-          {
-            business.website === "" ? "" : <div>Website {business.website}</div>}
-
+      <div className="flex h-full">
+        <div className="flex-col space-y-5 w-5/12 h-full pl-5 pt-5">
+          {business.website === "" ? (
+            ""
+          ) : (
+            <a
+              href={`${business.website}`}
+              target="_blank"
+              className="bg-greenbook-green flex w-fit p-3 rounded-md text-white"
+            >
+              View Website
+            </a>
+          )}
+          <div className=" w-9/12 flex flex-col h-1/6 rounded-lg shadow-xl space-y-5 p-3">
+            <div>Address: {business.address}</div>
+            <div>City: {business.City}</div>
+          </div>
         </div>
-        <div className="w-5/12 h-1/2 border"></div>
+        <div className="w-7/12 h-1/2 ">
+          <div className="flex space-x-3 mt-3 ml-3">
+            <button className="bg-greenbook-green p-2 text-white rounded-lg">Likes</button>
+            <button className="bg-greenbook-green p-2 text-white rounded-lg">Dislikes</button>
+            <div className="bg-greenbook-green p-2 text-white rounded-lg">Approval Rating</div>
+          </div>
+          <div className="border rounded-lg mt-10">
+            <h2 className="text-3xl mt-3 ml-3">About</h2>
+            <div className="m-5">{business.summary}</div>
+          </div>
+        </div>
       </div>
     </main>
   );
