@@ -12,11 +12,15 @@ export const createBusiness = (interview) => {
 };
 
 export const getAllBusinesses = () => {
-  return fetch(`http://localhost:8088/businesses?_expand=category`).then((res) => res.json());
+  return fetch(`http://localhost:8088/businesses?_expand=category`).then(
+    (res) => res.json()
+  );
 };
 
-export const getSingleBusiness = ({id}) => {
-  return fetch(`http://localhost:8088/businesses/${id}?_expand=category`).then((res) => res.json());
+export const getSingleBusiness = ({ id }) => {
+  return fetch(`http://localhost:8088/businesses/${id}?_expand=category`).then(
+    (res) => res.json()
+  );
 };
 
 export const getAllCategories = () => {
@@ -40,11 +44,8 @@ export const createIncident = (newIncident) => {
 }
 
 export const getAllIncidentTypes = () => {
-  return fetch(`http://localhost:8088/incidentTypes`).then((res) =>
-    res.json()
-  );
+  return fetch(`http://localhost:8088/incidentTypes`).then((res) => res.json());
 };
-
 
 export const deleteBusiness = (id) => {
   return fetch(`http://localhost:8088/interviews/${id}`, {
@@ -52,16 +53,5 @@ export const deleteBusiness = (id) => {
     headers: {
       Authorization: `Token ${localStorage.getItem("seeker_token")}`,
     },
-  });
-};
-
-export const updateBusiness = (interview, id) => {
-  return fetch(`http://localhost:8088/interviews/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Token ${localStorage.getItem("seeker_token")}`,
-    },
-    body: JSON.stringify(interview),
   });
 };
