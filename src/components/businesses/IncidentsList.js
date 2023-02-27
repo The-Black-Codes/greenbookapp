@@ -28,6 +28,7 @@ export const IncidentsList = ({ incidents }) => {
               <h2 className="text-xl">{incident.title}</h2>
               <div>Reported by: {incident?.user?.firstName} {incident?.user?.lastName}</div>
               <div className="absolute top-2 right-3">{incident.incidentType.type}</div>
+              <div className="date">{incident.date}</div>
               <div>{incident.business.name}</div>
               <div>"{incident.content}"</div>
             </div>
@@ -37,3 +38,4 @@ export const IncidentsList = ({ incidents }) => {
     </main>
   );
 };
+

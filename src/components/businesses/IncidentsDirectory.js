@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   getAllBusinesses,
   getAllCategories,
@@ -11,6 +12,7 @@ import { IncidentsList } from "./IncidentsList";
 export const IncidentsDirectory = () => {
   const [incidents, setIncidents] = useState([]);
   const [incidentTypes, setIncidentTypes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getAllIncidents().then((incidents) => {
@@ -45,9 +47,13 @@ export const IncidentsDirectory = () => {
           </select>
         </div>
       </div>
+      <button className="btn" id="createBtn"
+                onClick={() => {
+                    navigate({ pathname: "/incidentform" })
+            }}>Report an Incident</button>
       <div className="flex justify-center">
         <IncidentsList incidents={incidents} />
       </div>
     </main>
   );
-};
+}; 
