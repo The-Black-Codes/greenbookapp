@@ -12,11 +12,15 @@ export const createBusiness = (interview) => {
 };
 
 export const getAllBusinesses = () => {
-  return fetch(`http://localhost:8088/businesses?_expand=category`).then((res) => res.json());
+  return fetch(`http://localhost:8088/businesses?_expand=category`).then(
+    (res) => res.json()
+  );
 };
 
-export const getSingleBusiness = ({id}) => {
-  return fetch(`http://localhost:8088/businesses/${id}?_expand=category`).then((res) => res.json());
+export const getSingleBusiness = ({ id }) => {
+  return fetch(`http://localhost:8088/businesses/${id}?_expand=category`).then(
+    (res) => res.json()
+  );
 };
 
 export const getAllCategories = () => {
@@ -30,11 +34,8 @@ export const getAllIncidents = () => {
 };
 
 export const getAllIncidentTypes = () => {
-  return fetch(`http://localhost:8088/incidentTypes`).then((res) =>
-    res.json()
-  );
+  return fetch(`http://localhost:8088/incidentTypes`).then((res) => res.json());
 };
-
 
 export const deleteBusiness = (id) => {
   return fetch(`http://localhost:8088/interviews/${id}`, {
