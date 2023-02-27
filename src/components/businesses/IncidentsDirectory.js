@@ -44,10 +44,11 @@ export const IncidentsDirectory = () => {
           </select>
         </div>
       </div>
-      <button className="btn" id="createBtn"
+      <div className="flex justify-center">
+      <button className="bg-greenbook-green text-white p-1 rounded-lg" id="createBtn"
                 onClick={() => {
                     navigate({ pathname: "/incidentform" })
-            }}>Report an Incident</button>
+            }}>Report an Incident</button></div>
       <div className="flex justify-center">
         <IncidentsList incidents={incidents} />
       </div>
