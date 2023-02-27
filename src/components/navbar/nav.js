@@ -53,7 +53,22 @@ export const NavBar = () => {
         </button>
       </div>
       <div className="w-3/12 flex justify-end">
-        <button className="text-white pr-5 text-xl">Login</button>
+        <button
+          onClick={() => {
+            navigate("/register");
+          }}
+          className="text-white pr-5 text-xl"
+        >
+          Register
+        </button>
+        <button
+          onClick={() => {
+            navigate("/login");
+          }}
+          className="text-white pr-5 text-xl"
+        >
+          Login
+        </button>
       </div>
     </nav>
   );
