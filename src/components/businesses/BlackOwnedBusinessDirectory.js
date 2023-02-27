@@ -65,6 +65,17 @@ export const BlackOwnedBusinessDirectory = ({businesses, searchedBusinesses}) =>
                   <div className="">{business?.category?.name}</div>
                   <div>{business.address}</div>
                   <div>{business.City}</div>
+                  <div className="flex space-x-4 mt-4">
+  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noreferrer">
+    <img src="/facebook-icon.png" alt="Facebook icon" className="w-8 h-8" />
+  </a>
+  <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent("Check out these black-owned businesses!")}`} target="_blank" rel="noreferrer">
+    <img src="/twitter-icon.png" alt="Twitter icon" className="w-8 h-8" />
+  </a>
+  <a href={`https://www.instagram.com/?url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noreferrer">
+    <img src="/instagram-icon.png" alt="Instagram icon" className="w-8 h-8" />
+  </a>
+</div>
                   {business.isBlackOwned ? (
                     <div className="flex absolute top-1 right-3">
                       Black Owned {heroCheckmark}
