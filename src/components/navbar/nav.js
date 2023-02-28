@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import greenBookLogo from "../../images/greenbooklogo.svg";
+import greenBookLogo from "../../images/greenbooklogo_h.svg";
 import { getSingleBusiness } from "../managers/BusinessManager";
 import { getSingleUser } from "../managers/UserManager";
 
