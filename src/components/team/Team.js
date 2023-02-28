@@ -30,7 +30,7 @@ export const Team = () => {
             id: 5,
             name: "Chaneice",
             info: "Prior to her transition to tech, Chaneice worked as a Family Support Services Specialist, Claims Adjuster, Volunteer Advocate, and even a Telemarketer. With her strong interpersonal skills and experience in collaborative problem-solving, Chaneice is ready to take on new challenges in the tech industry.",
-            linkedin:"https://www.linkedin.com/in/jonathan-woodard/"
+            linkedin:"https://www.linkedin.com/in/chaneice-jackson-dunham//"
         }
     ]
 
