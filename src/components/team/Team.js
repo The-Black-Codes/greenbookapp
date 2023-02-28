@@ -46,7 +46,7 @@ export const Team = () => {
                         </div>
                     <div>
                         <a href={member.linkedin} target="_blank" rel="noreferrer">
-                            <img src="/facebook-icon.png" alt="Linkedin icon" className="w-8 h-8" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/800px-LinkedIn_icon_circle.svg.png" alt="Linkedin icon" className="w-8 h-8" />
                             </a>
                         </div>
                 </div>
