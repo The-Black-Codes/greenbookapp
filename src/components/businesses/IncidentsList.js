@@ -18,12 +18,14 @@ export const IncidentsList = ({ incidents }) => {
   );
 
   return (
-    <main className="w-3/4 h-full mt-10 fixed overflow-y-scroll">
+    <main className="">
+    <div className="flex justify-center bg-black">
+    <main className="w-3/4 h-[660px] mt-5 fixed overflow-y-scroll bg-green-100 p-3 rounded-xl">
       <div className="space-y-3">
         {incidents.map((incident) => {
           return (
-            <div className="border rounded-lg relative p-3 h-36">
-              <h2 className="text-xl">{incident.title}</h2>
+            <div className="border bg-white relative p-3 rounded-lg shadow-xl">
+              <h2 className="text-2xl mb-2">{incident.title}</h2>
               <div>Reported by: {incident?.user?.firstName} {incident?.user?.lastName}</div>
               <div className="absolute top-2 right-3">{incident.incidentType.type}</div>
               <div className="date">{incident.date}</div>
@@ -32,6 +34,8 @@ export const IncidentsList = ({ incidents }) => {
             </div>
           );
         })}
+        </div>
+        </main>
       </div>
     </main>
   );

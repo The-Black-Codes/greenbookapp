@@ -26,7 +26,8 @@ export const IncidentsDirectory = () => {
     <main>
       <h1 className="text-5xl text-center m-8">Incidents</h1>
       <div className="flex justify-center">
-        <div className="flex space-x-16 border justify-center w-2/3 rounded-lg shadow-lg h-20">
+      
+        <div class="flex space-x-16 border justify-center w-2/3 h-24 rounded-lg shadow-lg">
           <select className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2 ring-greenbook-green">
             <option value={0}>Select Category</option>
             {incidentTypes.map((incidentType) => {
@@ -43,7 +44,9 @@ export const IncidentsDirectory = () => {
             <option value={0}>Select Filter</option>
           </select>
         </div>
+        
       </div>
+
       <div className="flex justify-center">
       <button className="bg-greenbook-green text-white p-1 rounded-lg" id="createBtn"
                 onClick={() => {
