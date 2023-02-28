@@ -1,4 +1,4 @@
-import { ServerIcon, BuildingStorefrontIcon, CalendarDaysIcon, ShieldExclamationIcon } from '@heroicons/react/20/solid'
+import { BuildingStorefrontIcon, CalendarDaysIcon, ShieldExclamationIcon } from '@heroicons/react/20/solid'
 
 
 export const About = () => {
@@ -9,8 +9,8 @@ export const About = () => {
           <div className="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
             <img
               className="absolute inset-0 h-full w-full bg-gray-50 object-cover"
-              src="https://images.pexels.com/photos/763934/pexels-photo-763934.jpeg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-              alt=""
+              src="https://images.unsplash.com/photo-1521151716396-b2da27b1a19f"
+              alt="Black Joy"
             />
           </div>
         </div>
@@ -28,12 +28,7 @@ export const About = () => {
             <h2 className="mt-16 text-2xl font-bold tracking-tight text-emerald-700">We're putting a new twist on the Green Book and getting your reviews 
             straight from the source in real time.</h2>
             <div className="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
-              <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                semper sed amet vitae sed turpis id.
-              </p>
+             
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
                   <BuildingStorefrontIcon className="mt-1 h-5 w-5 flex-none text-emerald-700" aria-hidden="true" />
@@ -57,13 +52,7 @@ export const About = () => {
                   </span>
                 </li>
               </ul>
-              {/* <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
-              <p className="mt-6">
-                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
-                Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
-                tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                turpis ipsum eu a sed convallis diam.
-              </p> */}
+             
             </div>
           </div>
         </div>
