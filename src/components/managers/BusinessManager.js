@@ -30,6 +30,12 @@ export const getAllIncidents = () => {
   ).then((res) => res.json());
 };
 
+export const getAllIncidentsByBusiness = (id) => {
+  return fetch(
+    `http://localhost:8088/incidents?_expand=business&_expand=incidentType&businessId=${id}`
+  ).then((res) => res.json());
+};
+
 export const createIncident = (newIncident) => {
   return fetch(`http://localhost:8088/incidents`, {
       method: "POST",
