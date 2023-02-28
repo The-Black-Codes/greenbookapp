@@ -5,7 +5,7 @@ import {
 } from "../managers/BusinessManager";
 import { Link } from "react-router-dom"
 
-export const BlackOwnedBusinessDirectory = ({businesses, searchedBusinesses}) => {
+export const BlackOwnedBusinessDirectory = ({businesses}) => {
 
   // checkmark icon from hero icons
   const heroCheckmark = (

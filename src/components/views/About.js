@@ -17,7 +17,7 @@ export const About = () => {
         <div className="px-6 lg:contents">
           <div className="mx-auto max-w-2xl pt-16 pb-24 sm:pt-20 sm:pb-32 lg:mr-0 lg:ml-8 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2">
             <p className="text-base font-semibold leading-7 text-neutral-900">For Us By Us</p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-emerald-700 sm:text-4xl">The Greeniest Book!</h1>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-emerald-700 sm:text-4xl">The Greenest Book!</h1>
             <p className="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
             The Green Book was a travel guide created by Victor Hugo Green, an African American postal worker, 
             in 1936 during the era of segregation in the United States. The guide listed safe places 

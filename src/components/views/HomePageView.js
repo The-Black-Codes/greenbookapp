@@ -26,15 +26,15 @@ export const HomePageView = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <img src={BHM} alt="happy"></img>
+      <div className="w-screen">
+        <img className="w-screen h-80" src={BHM} alt="happy"></img>
       </div>
 
       <div className="bg-white py-32">
         <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
           <div className="mx-auto max-w-2xl">
             <h1 className="text-3xl font-bold tracking-tight text-emerald-700 sm:text-4xl">
-              The Greeniest Book!
+              The Greenest Book!
             </h1>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               For Us By Us.

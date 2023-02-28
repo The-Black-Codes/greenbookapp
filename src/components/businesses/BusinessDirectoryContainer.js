@@ -6,7 +6,6 @@ import { getAllBusinesses } from "../managers/BusinessManager";
 export const BusinessDirectoryContainer = () => {
   const [searchTerms, setBusinessSearchTerms] = useState("");
   const [businesses, setBusinesses] = useState([]);
-  const [searchedBusinesses, setSearchedBusinesses] = useState([]);
 
   useEffect(() => {
     getAllBusinesses().then((businesses) => {
@@ -17,7 +16,7 @@ export const BusinessDirectoryContainer = () => {
   // The Business Directory Container parent component will return two children components.
   return (
     <>
-      <h1 className="text-5xl text-center m-5">Businesses Directory</h1>
+      <h1 className="text-5xl text-center m-5">Business Directory</h1>
       <BusinessSearch
         setterFunction={setBusinessSearchTerms}
         businesses={businesses}
@@ -27,7 +26,6 @@ export const BusinessDirectoryContainer = () => {
       <BlackOwnedBusinessDirectory
         searchTermState={searchTerms}
         businesses={businesses}
-        searchedBusinesses={searchedBusinesses}
       />
     </>
   );
