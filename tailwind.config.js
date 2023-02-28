@@ -3,8 +3,14 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        greenbookbackground: "url(../src/images/BHM.jpeg)",
+      },
       colors: {
         "greenbook-green": "#015044",
+      },
+      scale: {
+        102: "1.02",
       },
       height: {
         30: "30vh",

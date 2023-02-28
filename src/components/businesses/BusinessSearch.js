@@ -15,6 +15,7 @@ export const BusinessSearch = ({
   const [categories, setCategories] = useState([]);
   const [selectedCategoryId, setSelectedCategoryId] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+  const [ownershipStatus, setOwnershipStatus] = useState("");
 
   useEffect(() => {
     getAllCategories().then((categories) => {
@@ -27,12 +28,23 @@ export const BusinessSearch = ({
       setBusinesses(businesses);
       setSelectedCategoryId("0");
       setSelectedCity("0");
+      setOwnershipStatus("0");
     });
   };
 
   const getBusinessByCategory = (id) => {
     return fetch(
       `http://localhost:8088/businesses?_expand=category&categoryId=${id}`
+    )
+      .then((res) => res.json())
+      .then((businesses) => {
+        setBusinesses(businesses);
+      });
+  };
+
+  const getBusinessByOwnership = (status) => {
+    return fetch(
+      `http://localhost:8088/businesses?_expand=category&isBlackOwned=${status}`
     )
       .then((res) => res.json())
       .then((businesses) => {
@@ -65,12 +77,14 @@ export const BusinessSearch = ({
       getBusinessByCategory(selectedCategoryId);
     } else if (selectedCity > "0") {
       getBusinessesByCity(selectedCity);
+    }  else if (ownershipStatus > "0") {
+      getBusinessByOwnership(ownershipStatus)
     } else {
       getAllBusinesses().then((businesses) => {
         setBusinesses(businesses);
       });
     }
-  }, [selectedCategoryId, selectedCity]);
+  }, [selectedCategoryId, selectedCity, ownershipStatus]);
 
   const searchIcon = (
     <svg
@@ -181,6 +195,18 @@ export const BusinessSearch = ({
           <option value="Joelton">Joelton</option>
           <option value="Murfreesboro">Murfreesboro</option>
           <option value="Nashville">Nashville</option>
+        </select>
+        <select
+          className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2"
+          value={ownershipStatus}
+          onChange={(evt) => {
+            const copy = evt.target.value;
+            setOwnershipStatus(copy);
+          }}
+        >
+          <option value="">Select Ownership Status</option>
+          <option value="true">Black Owned Business</option>
+          <option value="false">Non-Black Owned Business</option>
         </select>
       </div>
     </main>
