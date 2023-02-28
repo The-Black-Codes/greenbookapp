@@ -9,9 +9,8 @@ import { HomePageView } from "./HomePageView";
 import { Register } from "../auth/Register";
 import { Login } from "../auth/Login";
 import { Events } from "../calendar/Events";
-import { TeamList } from "../team/TeamList";
 import { IncidentDirectoryContainer } from "../businesses/IncidentDirectoryContainer";
-
+import { TeamList } from "../team/TeamList";
 
 // This component is responsible for rendering all the possible views for visitors to the site. It contains routes to other components in the application.
 export const ApplicationViews = () => {
