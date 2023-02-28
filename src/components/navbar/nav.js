@@ -46,14 +46,6 @@ export const NavBar = () => {
         </button>
         <button
           onClick={() => {
-            navigate("/map");
-          }}
-          className="text-white text-xl"
-        >
-          Map
-        </button>
-        <button
-          onClick={() => {
             navigate("/incidents");
           }}
           className="text-white text-xl"
@@ -91,18 +83,21 @@ export const NavBar = () => {
           </>
         ) : (
           <>
-            <div className="mt-9 text-white pr-5 text-md">
-              Welcome Back, {user.firstName}
+          <div className="flex">
+            <div className="mt-9 text-white mr-32 text-xl">
+              Welcome Back, {user.firstName}!
             </div>
             <button
               onClick={() => {
                 localStorage.removeItem("greenbook_user");
                 navigate("/", { replace: true });
               }}
-              className="text-white pr-5 text-xl"
+              className="text-white mr-10 text-xl"
             >
               Logout
             </button>
+
+          </div>
           </>
         )}
       </div>
