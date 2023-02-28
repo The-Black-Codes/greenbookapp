@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         "greenbook-green": "#015044",
       },
+      scale: {
+        '102': '1.02',
+      },
       height: {
         30: "30vh",
         35: "35vh",
