@@ -31,7 +31,7 @@ export const Team = () => {
             id: 5,
             name: "Chaneice",
             info: "Prior to her transition to tech, Chaneice worked as a Family Support Services Specialist, Claims Adjuster, Volunteer Advocate, and even a Telemarketer. With her strong interpersonal skills and experience in collaborative problem-solving, Chaneice is ready to take on new challenges in the tech industry.",
-            linkedin:"https://www.linkedin.com/in/jonathan-woodard/"
+            linkedin:"https://www.linkedin.com/in/chaneice-jackson-dunham/"
         }
     ]
 
@@ -42,12 +42,12 @@ export const Team = () => {
             {members.map((member) => {
           return (
                 <div className="border rounded-lg relative p-3">
-                    <h2 className="text-xl">{member.name}</h2>
+                    <h2 className="text-xl text-center">{member.name}</h2>
                     <div>{member.info}
                         </div>
-                    <div>
+                    <div className="text-">
                         <a href={member.linkedin} target="_blank" rel="noreferrer">
-                            <img src="/facebook-icon.png" alt="Linkedin icon" className="w-8 h-8" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Linkedin icon" className="w-8 h-8" />
                             </a>
                         </div>
                 </div>
