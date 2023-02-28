@@ -1,57 +1,45 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  getAllIncidents,
-  getAllIncidentTypes,
-} from "../managers/BusinessManager";
-import { IncidentsList } from "./IncidentsList";
 
-export const IncidentsDirectory = () => {
-  const [incidents, setIncidents] = useState([]);
-  const [incidentTypes, setIncidentTypes] = useState([]);
+export const IncidentsDirectory = ({ incidents }) => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    getAllIncidents().then((incidents) => {
-      setIncidents(incidents);
-    });
-  }, []);
-  useEffect(() => {
-    getAllIncidentTypes().then((incidentTypes) => {
-      setIncidentTypes(incidentTypes);
-    });
-  }, []);
 
   return (
     <main>
-      <h1 className="text-5xl text-center m-8">Incidents</h1>
       <div className="flex justify-center">
-        <div className="flex space-x-16 border justify-center w-2/3 rounded-lg shadow-lg h-20">
-          <select className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2 ring-greenbook-green">
-            <option value={0}>Select Category</option>
-            {incidentTypes.map((incidentType) => {
-              return (
-                <option value={incidentType.id}>{incidentType.type}</option>
-              );
-            })}
-          </select>
-          <input
-            className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2 ring-greenbook-green"
-            placeholder="Search Incidents"
-          ></input>
-          <select className="border border-slate-400 h-10 flex mt-4 rounded-lg p-2">
-            <option value={0}>Select Filter</option>
-          </select>
-        </div>
+        <button
+          className="bg-greenbook-green text-white p-1 rounded-lg mt-3"
+          id="createBtn"
+          onClick={() => {
+            navigate({ pathname: "/incidentform" });
+          }}
+        >
+          Report an Incident
+        </button>
       </div>
       <div className="flex justify-center">
-      <button className="bg-greenbook-green text-white p-1 rounded-lg" id="createBtn"
-                onClick={() => {
-                    navigate({ pathname: "/incidentform" })
-            }}>Report an Incident</button></div>
-      <div className="flex justify-center">
-        <IncidentsList incidents={incidents} />
+        <main className="w-3/4 mt-10 fixed overflow-y-scroll bg-green-100 h-[580px] p-3 rounded-xl">
+          <div className="space-y-3">
+            {incidents.map((incident) => {
+              return (
+                <div className="bg-white border rounded-lg relative p-3 h-36">
+                  <h2 className="text-xl">{incident.title}</h2>
+                  <div>
+                    Reported by: {incident?.user?.firstName}{" "}
+                    {incident?.user?.lastName}
+                  </div>
+                  <div className="absolute top-2 right-3">
+                    {incident.incidentType.type}
+                  </div>
+                  <div className="date">{incident.date}</div>
+                  <div>{incident.business.name}</div>
+                  <div>"{incident.content}"</div>
+                </div>
+              );
+            })}
+          </div>
+        </main>
       </div>
     </main>
   );
-}; 
+};
