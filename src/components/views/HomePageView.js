@@ -1,4 +1,4 @@
-import BHM from "../../images/BHM.jpeg";
+// import BHM from "../../images/BHM.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const categories = [
