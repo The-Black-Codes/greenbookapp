@@ -68,6 +68,15 @@ export const NavBar = () => {
         >
           Directory
         </button>
+        <button
+          onClick={() => {
+            navigate("/team");
+          }}
+          className="text-white text-xl"
+        >
+          Team
+        </button>
+        
       </div>
       <div className="w-3/12 flex justify-end">
         {greenBookUserObject === null ? (

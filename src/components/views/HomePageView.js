@@ -1,4 +1,4 @@
-import BHM from "../../images/BHM.jpeg";
+// import BHM from "../../images/BHM.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const categories = [
@@ -27,7 +27,7 @@ export const HomePageView = () => {
   return (
     <>
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <img src={BHM} alt="happy"></img>
+        {/* <img src={BHM} alt="happy"></img> */}
       </div>
 
       <div className="bg-white py-32">
